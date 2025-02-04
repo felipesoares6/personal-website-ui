@@ -30,7 +30,7 @@ function WorkExperienceForm({
   }
 
   return (
-    <div className="mx-auto mt-10 max-w-lg rounded-lg bg-white p-6 shadow-lg">
+    <div className="max-w-lg rounded-lg p-6 ">
       <h2 className="mb-4 text-2xl font-semibold text-gray-800">
         Add Work Experience
       </h2>

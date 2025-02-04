@@ -14,7 +14,18 @@ const createWorkExperience = async ({
   return (await personalWebsiteService.post('/work-experience', payload)).data
 }
 
+const deleteWorkExperience = async ({
+  workExperienceId
+}: {
+  workExperienceId: number
+}): Promise<WorkExperienceResponse> => {
+  return (
+    await personalWebsiteService.delete(`/work-experience/${workExperienceId}`)
+  ).data
+}
+
 export const WorkExperienceService = {
   getAllWorkExperience,
-  createWorkExperience
+  createWorkExperience,
+  deleteWorkExperience
 }

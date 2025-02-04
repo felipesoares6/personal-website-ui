@@ -1,12 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
-import WorkExperienceCreate from 'pages/admin-panel/work-experience/work-experience-create.page'
+import WorkExperienceCreatePage from 'pages/admin-panel/work-experience/work-experience-create.page'
 
 function WorkExperienceCreateRoute() {
   const navigate = Route.useNavigate()
 
   return (
-    <WorkExperienceCreate
-      navigateToAdmin={() => navigate({ to: '/admin/work-experience' })}
+    <WorkExperienceCreatePage
+      navigateToList={() => navigate({ to: '/admin/work-experience' })}
     />
   )
 }

@@ -2,26 +2,24 @@ import { WorkExperienceService } from 'api/personal-website-service/work-experie
 import { WorkExperienceNew } from 'models/work-experience.model'
 import WorkExperienceForm from './work-experience-form.component'
 
-function WorkExperienceCreate({
-  navigateToAdmin
+function WorkExperienceCreatePage({
+  navigateToList
 }: {
-  navigateToAdmin: () => void
+  navigateToList: () => void
 }) {
   const handleSubmit = async (workExperienceNew: WorkExperienceNew) => {
-    console.log(workExperienceNew)
-
     try {
       await WorkExperienceService.createWorkExperience({
         payload: workExperienceNew
       })
 
-      navigateToAdmin()
+      navigateToList()
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
 
   return <WorkExperienceForm onSubmit={handleSubmit} />
 }
 
-export default WorkExperienceCreate
+export default WorkExperienceCreatePage

@@ -24,7 +24,9 @@ function AdminPanelPage() {
         </ul>
       </nav>
 
-      <Outlet />
+      <main className="w-max">
+        <Outlet />
+      </main>
     </div>
   )
 }

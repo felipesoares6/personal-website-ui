@@ -4,8 +4,14 @@ import WorkExperiencePage from 'pages/work-experience.page'
 
 function WorkExperienceListRoute() {
   const workExperiences = Route.useLoaderData()
+  const navigate = Route.useNavigate()
 
-  return <WorkExperiencePage workExperiences={workExperiences} />
+  return (
+    <WorkExperiencePage
+      workExperiences={workExperiences}
+      navigateToList={() => navigate({ to: '/admin/work-experience' })}
+    />
+  )
 }
 
 export const Route = createFileRoute('/admin/work-experience/')({
